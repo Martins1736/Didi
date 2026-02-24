@@ -74,9 +74,6 @@ function changeImage(element) {
     }, 200);
 }
 
-function changeImage(element) {
-    document.getElementById("mainImage").src = element.src;
-}
 
 /* ================= CONTINUOUS FALLING HEARTS ================= */
 
@@ -143,3 +140,4 @@ function createConfettiPiece() {
 /* Continuous particle confetti */
 
 setInterval(createConfettiPiece, 300);
+
