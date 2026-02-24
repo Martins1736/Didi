@@ -243,8 +243,6 @@ body {
 }
 
 
-
-
 /* Flap */
 
 .flap {
@@ -256,12 +254,6 @@ body {
     transform-origin: top;
     transition: transform 0.8s ease;
 }
-
-
-/* Paper */
-
-
-/* Envelope */
 
 
 /* LETTER PAGE */
@@ -281,8 +273,10 @@ body {
 .envelope {
     position: relative;
     width: 90%;
-    max-width: 420px;   /* keeps desktop size */
-    aspect-ratio: 21 / 13;  /* same proportion as 420x260 */
+    max-width: 420px;
+    /* keeps desktop size */
+    aspect-ratio: 21 / 13;
+    /* same proportion as 420x260 */
     background: #c77dff;
     border-radius: 16px;
     cursor: pointer;
@@ -458,7 +452,7 @@ body {
     background: white;
     padding: 30px;
     border-radius: 20px;
-    width: 1000px;
+    width: 700px;
     text-align: center;
 }
 
@@ -480,12 +474,12 @@ body {
     gap: 15px;
 }
 
-.gallery-thumbnails img {
-    width: 80px;
-    height: 80px;
+.thumbnails img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 10px;
-    cursor: default;
+    border-radius: 12px;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -502,9 +496,9 @@ body {
 
 .main-frame img {
     width: 400px;
-    height: 350px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 15px;
     transition: opacity 0.4s ease;
 }
 
@@ -637,10 +631,4 @@ body {
     100% {
         transform: translateY(110vh) rotate(720deg);
     }
-
 }
-
-
-
-
-
