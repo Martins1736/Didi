@@ -480,12 +480,12 @@ body {
     gap: 15px;
 }
 
-.thumbnails img {
-    width: 100px;
-    height: 100px;
+.gallery-thumbnails img {
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 12px;
-    cursor: pointer;
+    cursor: default;
     transition: transform 0.3s ease;
 }
 
@@ -639,4 +639,5 @@ body {
     }
 
 }
+
 
