@@ -1,0 +1,652 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+
+/* PURPLE ANIMATED BACKGROUND */
+
+.gate-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #4b0082, #800080, #6a0dad, #5e17eb);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* CONTAINER */
+
+.gate-container {
+    backdrop-filter: blur(10px);
+}
+
+
+/* FADE IN ANIMATIONS */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.delay {
+    animation-delay: 0.5s;
+}
+
+.delay2 {
+    animation-delay: 1s;
+}
+
+.delay3 {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* INPUT */
+
+.date-input {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* BUTTON */
+
+.continue-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #d580ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #d580ff;
+}
+
+
+/* ERROR */
+
+.error-message {
+    margin-top: 15px;
+    color: #ffb3ff;
+}
+
+
+/* SHAKE ANIMATION */
+
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* SURPRISE PAGE */
+
+.surprise-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #2e004f, #5e17eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* Container */
+
+.surprise-container {
+    animation: fadeInPage 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInPage {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Title */
+
+.surprise-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: cursive;
+}
+
+.surprise-sub {
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+
+/* Gifts Layout */
+
+.gift-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* Gift Card */
+
+.gift-card {
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+
+/* Gift Image */
+
+.gift-card img {
+    width: 70px;
+    transition: 0.4s ease;
+}
+
+
+/* Hover Animation */
+
+.gift-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px #c77dff;
+}
+
+.gift-card:hover img {
+    transform: scale(1.1);
+}
+
+
+/* LETTER PAGE */
+
+
+/* LETTER PAGE – Animated Background */
+
+.letter-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(-45deg, #4b0082, #800080, #6a0dad, #5e17eb);
+    background-size: 400% 400%;
+    animation: letterGradient 10s ease infinite;
+}
+
+
+/* Container */
+
+.letter-container {
+    text-align: center;
+}
+
+
+/* Envelope */
+
+.envelope {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background: #c77dff;
+    border-radius: 12px;
+    cursor: pointer;
+    perspective: 1000px;
+    transition: 0.5s;
+}
+
+
+/* Flap */
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #9d4edd;
+    clip-path: polygon(0 0, 50% 50%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+}
+
+
+/* Paper */
+
+
+/* Envelope */
+
+
+/* LETTER PAGE */
+
+.letter-page {
+    height: 100vh;
+    background: linear-gradient(to bottom, #2e004f, #5e17eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+/* Bigger Envelope */
+
+.envelope {
+    position: relative;
+    width: 420px;
+    /* bigger */
+    height: 260px;
+    /* taller */
+    background: #c77dff;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 40px rgba(199, 125, 255, 0.6);
+    transition: transform 0.3s ease;
+}
+
+
+/* Slight hover lift */
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Flap */
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #9d4edd;
+    clip-path: polygon(0 0, 50% 55%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+    z-index: 3;
+}
+
+
+/* Paper inside */
+
+.paper {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 220px;
+    /* bigger paper */
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    padding: 25px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.9s ease;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Open state */
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .paper {
+    transform: translateY(-80px);
+}
+
+
+/* Flap */
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: #9d4edd;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+    z-index: 3;
+}
+
+
+/* Paper (START INSIDE) */
+
+.paper {
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    width: 80%;
+    height: 180px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* smaller than envelope */
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    /* hide it completely */
+    transition: transform 0.9s ease;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Open state */
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .paper {
+    transform: translateY(-40px);
+    /* slides OUT upward */
+}
+
+
+/* Open animation */
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .paper {
+    bottom: 10px;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #d580ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+    .envelope {
+        width: 90%;
+        height: 240px;
+    }
+    .paper {
+        height: 200px;
+    }
+}
+
+
+/* GALLERY PAGE */
+
+
+/* GALLERY PAGE – Animated Background */
+
+.gallery-page {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #4b0082, #800080, #6a0dad, #5e17eb);
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.gallery-wrapper {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 900px;
+    text-align: center;
+}
+
+.gallery-wrapper h1 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.main-frame {
+    background: #ffb6c1;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.main-frame img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.4s ease;
+}
+
+.caption {
+    margin-top: 10px;
+    color: #d63384;
+}
+
+
+/* ===== GALLERY PAGE ANIMATED BACKGROUND ===== */
+
+.gallery-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(-45deg, #4b0082, #800080, #6a0dad, #5e17eb);
+    background-size: 400% 400%;
+    animation: galleryGradient 10s ease infinite;
+}
+
+
+/* Separate animation name to avoid conflict */
+
+@keyframes galleryGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes letterGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ===== LETTER PAGE ANIMATED BACKGROUND ===== */
+
+.letter-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(-45deg, #4b0082, #800080, #6a0dad, #5e17eb);
+    background-size: 400% 400%;
+    animation: letterGradient 10s ease infinite;
+}
+
+@keyframes letterGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ================= CONFETTI SYSTEM ================= */
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+
+/* Falling hearts */
+
+.confetti {
+    position: absolute;
+    font-size: 18px;
+    animation: fall linear infinite;
+    filter: drop-shadow(0 0 6px rgba(255, 105, 180, 0.8));
+    opacity: 0.9;
+}
+
+
+/* Falling animation */
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+
+/* ================= CONFETTI PARTICLES ================= */
+
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    opacity: 0.9;
+    animation: confettiFall linear infinite;
+    border-radius: 2px;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
