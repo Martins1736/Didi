@@ -2,7 +2,7 @@ function checkDate() {
     const input = document.getElementById("birthdate").value;
     const error = document.getElementById("error");
 
-    const correctDate = "2000-01-01"; // CHANGE THIS
+   const correctDate = "2026-02-25"; // CHANGE THIS
 
     if (input === correctDate) {
         document.body.style.opacity = "0";
@@ -30,15 +30,23 @@ function openGift(number) {
 
 }
 
+let letterAlreadyOpened = false;
+
 function openEnvelope() {
+
+    if (letterAlreadyOpened) return; // prevents double typing
+    letterAlreadyOpened = true;
+
     const envelope = document.querySelector(".envelope");
     const textElement = document.getElementById("typedText");
 
-    if (!envelope || !textElement) return; // prevents crash
+    if (!envelope || !textElement) return;
 
     envelope.classList.add("open");
 
-    const message = "Happy Birthday my love 💜\n\nYou are the most beautiful part of my life. I made this little website just to remind you how special you are to me.";
+    const message = "Happy Birthday Didi💜\n\n I wish you many years ahead and i hope this makes up for the val too. See you when you get back, Martins loves you💜. ";
+
+    textElement.innerHTML = ""; // clear before typing
 
     let index = 0;
 
@@ -52,7 +60,6 @@ function openEnvelope() {
 
     setTimeout(type, 800);
 }
-
 function goBack() {
     window.location.href = "surprise.html";
 }
@@ -134,4 +141,5 @@ function createConfettiPiece() {
 }
 
 /* Continuous particle confetti */
+
 setInterval(createConfettiPiece, 300);
