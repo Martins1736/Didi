@@ -44,7 +44,7 @@ function openEnvelope() {
 
     envelope.classList.add("open");
 
-    const message = "Happy Birthday Didi💜\n\n I wish you many years ahead and i hope this makes up for the val too. See you when you get back, Martins loves you💜. ";
+    const message = "Happy Birthday Pitch Lily💜\n\n I wish you many years ahead and i hope this makes up for the val too. See you when you get back, Martins loves you💜. ";
 
     textElement.innerHTML = ""; // clear before typing
 
@@ -147,5 +147,6 @@ function createConfettiPiece() {
 /* Continuous particle confetti */
 
 setInterval(createConfettiPiece, 300);
+
 
 
